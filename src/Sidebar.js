@@ -26,9 +26,10 @@ const AppSidebar=({setAvatar,user,setCurrentChat,setChatWith,currentChat,socket}
    // console.log(dice)
  }, [])
 
-  React.useEffect(async ()=>{
+  React.useEffect(()=>{
      
-    try
+     async function fetchData() {
+          try
     {
         const conv = await axios.get(`https://znx-chat-server.herokuapp.com/api/chat/${user._id}`)
          await setRooms(conv.data)
@@ -38,8 +39,9 @@ const AppSidebar=({setAvatar,user,setCurrentChat,setChatWith,currentChat,socket}
     {
       console.log(err)
     }
+     } fetchData();
       
-  },[])
+  })
 
 
  return (<>

@@ -18,13 +18,9 @@ function Chat({avatar,currentChat,user,onlineUser,chatWith,socket,setCurrentChat
     
     const isMobile = useMediaQuery('(max-width: 500px)');
  
-  const styles = {
-  container: isMobile => ({
-    dispaly : isMobile ? !currentChat ?"none" :"block" : "block"
-  })
-};
 
-  var count =0;
+
+ 
  const [Message, setMessage] = React.useState("")
  const [messages,setMessages] = React.useState()
  const [ArrivalMessage, setArrivalMessage] = React.useState(null)
@@ -62,9 +58,6 @@ function Chat({avatar,currentChat,user,onlineUser,chatWith,socket,setCurrentChat
       const res = await axios.post(`https://znx-chat-server.herokuapp.com/api/message`,{
        messageId ,sender,text
       })
-
-      
-      
       setMessages([...messages,res.data])
 
  }
@@ -78,11 +71,12 @@ function Chat({avatar,currentChat,user,onlineUser,chatWith,socket,setCurrentChat
   if(currentChat)
   {
   try{
+    
+    const response = await axios.get(`https://znx-chat-server.herokuapp.com/api/user/${chatWith}/username`)
+    setName(response.data)
+
     const res = await axios.get(`https://znx-chat-server.herokuapp.com/api/message/${currentChat}`)
     setMessages(res.data)
-
-    const response = await axios.get(`https://znx-chat-server.herokuapp.com/api/user/${chatWith}/username`)
-   setName(response.data)
     
     setOnline(onlineUser?.find(user=>user.userId === chatWith))
     

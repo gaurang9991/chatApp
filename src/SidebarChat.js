@@ -5,7 +5,7 @@ import {Avatar, IconButton} from "@material-ui/core";
 import axios from "axios"
 
 function SidebarChat({addNewChat,setAvatar,id,user,setCurrentChat,convId,setChatWith,socket,setRooms,rooms}) {
-  const PORT = process.env.PORT || 5000;
+
   const [dice, setDice] = React.useState("1");
   const [name,setName] = React.useState("");
   React.useEffect(async()=>{
