@@ -1,0 +1,37 @@
+.SidebarChat {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #f6f6f6;
+  border-radius: 12px;
+  margin: 0.5rem;
+  background-color: white;
+}
+.SidebarChat .MuiIconButton-root {
+  padding: 0;
+}
+
+.SidebarChat h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.SidebarChat:hover {
+  background-color: #167eff;
+  border: 1px solid #167eff;
+}
+
+.sidebarChat_info > h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sidebarChat_info {
+  margin-left: 1.1rem;
+}
+.sidebarChat_info > p {
+  font-size: small;
+  margin-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
