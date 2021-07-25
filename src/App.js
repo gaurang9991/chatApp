@@ -9,11 +9,9 @@ import { Redirect } from 'react-router';
 import {io} from "socket.io-client";
 
 function App() {
-  const PORT = process.env.PORT || 5000;
   const [avatar, setAvatar] = React.useState(0);
   const [onlineUser,setOnlineUser] = React.useState()
   const [user, setUser] = React.useState(JSON.parse(sessionStorage.getItem('user')) || {});
-  const [userLoggedIn, setUserLoggedIn] = React.useState(false)
   const [currentChat, setCurrentChat] = React.useState()
   const [chatWith,setChatWith] =  React.useState()
   const [socket, setsocket] = React.useState(null)

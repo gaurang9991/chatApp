@@ -12,7 +12,7 @@ import {useMediaQuery} from './hook';
 
 const AppSidebar=({setAvatar,user,setCurrentChat,setChatWith,currentChat,socket})=> {
   
-  const PORT = process.env.PORT || 5000;
+  
   const [loaded, setLoaded] = React.useState(false)
   const [rooms, setRooms] = React.useState([{}]);
   const [dice, setDice] = React.useState("1");

@@ -13,7 +13,7 @@ function SidebarChat({addNewChat,setAvatar,id,user,setCurrentChat,convId,setChat
     
     if(id)
     {
-      if(id[1]==user._id)
+      if(id[1]===user._id)
       {
         
         const response = await axios.get(`https://znx-chat-server.herokuapp.com/api/user/${id[0]}/username`)

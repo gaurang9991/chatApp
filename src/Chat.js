@@ -15,7 +15,7 @@ import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 function Chat({avatar,currentChat,user,onlineUser,chatWith,socket,setCurrentChat}) {
    
-    const PORT = process.env.PORT || 5000;
+    
     const isMobile = useMediaQuery('(max-width: 500px)');
  
   const styles = {

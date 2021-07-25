@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./signin.css";
-import ChatIcon from "@material-ui/icons/Chat";
+
 import axios from "axios";
 import { Redirect } from 'react-router';
 
 const SignIn = ({setUser})=>{
 
    
-const PORT = process.env.PORT || 5000;
 const [Username, setUsername] = React.useState("");
  const [password, setPassword] = React.useState("");
  const [loggedin,setLoggedIn] = React.useState(false)
