@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Deployed at Netlify
+
+Link - https://sleepy-jepsen-dcb4b3.netlify.app/ 
+
+creds - divya@gmail.com / 12345678 OR create a new account
+
 ## Available Scripts
 
 In the project directory, you can run:
